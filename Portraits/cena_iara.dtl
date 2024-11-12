@@ -1,0 +1,14 @@
+[background arg="res://Portraits/Floresta_fundo.webp" fade="0.0"]
+join dudu left
+dudu: Olá, preciso que me ajude a encontrar meu gato!
+leave dudu
+join iara right
+iara: Não pense que será fácil assim!
+iara: Bem-vindo ao meu lago encantado.\
+Eu sou a Iara, a sereia que canta os mistérios das águas.
+iara: Eu já fui uma indígena, mas os ciúmes e as intrigas me transformaram.
+iara: Agora, encanto todos os que se aventuram em meu domínio com meu canto hipnótico.
+iara: Eu tenho um desafio para você!
+iara: Vamos ver se você consegue encontrar todas as palavras antes de ser hipnotizado pelo meu canto.
+iara: Se conseguir, lhe darei um frasco de água mágica que o ajudará a enfrentar o seu desafio final.
+leave iara

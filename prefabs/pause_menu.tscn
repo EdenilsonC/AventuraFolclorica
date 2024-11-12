@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvwuc0y4fp5n5"]
+
+[ext_resource type="Theme" uid="uid://7clwdd7egwed" path="res://prefabs/pause_menu.tres" id="1_5w10u"]
+[ext_resource type="Script" path="res://prefabs/pause_menu.gd" id="1_vj2bs"]
+[ext_resource type="FontFile" uid="uid://cuutcita4vw70" path="res://Fontes/Retro Gaming.ttf" id="2_5pixu"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_uhaod"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_14x6c"]
+events = [SubResource("InputEventAction_uhaod")]
+
+[node name="pause_menu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_vj2bs")
+
+[node name="bg_overlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.454902)
+
+[node name="Label" type="Label" parent="."]
+process_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -197.0
+offset_top = 156.0
+offset_right = 202.0
+offset_bottom = 214.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.94902, 0.811765, 0, 1)
+theme_override_fonts/font = ExtResource("2_5pixu")
+theme_override_font_sizes/font_size = 45
+text = "JOGO PAUSADO"
+
+[node name="menu_holder" type="VBoxContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -33.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="resume_btn" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("1_5w10u")
+shortcut = SubResource("Shortcut_14x6c")
+text = "CONTINUAR JOGO"
+
+[node name="quit_btn" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("1_5w10u")
+text = "VOLTAR AO MENU"
+
+[connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="menu_holder/quit_btn" to="." method="_on_quit_btn_pressed"]

@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b80gfr4gu7o8m"]
+
+[ext_resource type="FontFile" uid="uid://cuutcita4vw70" path="res://Fontes/Retro Gaming.ttf" id="1_mt7q1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25gaw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nvx3"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqg4n"]
+bg_color = Color(1.70166e-06, 0.000164901, 6.70845e-05, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0n61u"]
+bg_color = Color(0, 0, 0, 0.705882)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yeawl"]
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 0, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_mt7q1")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_25gaw")
+Button/styles/focus = SubResource("StyleBoxFlat_0nvx3")
+Button/styles/hover = SubResource("StyleBoxFlat_iqg4n")
+Button/styles/normal = SubResource("StyleBoxFlat_0n61u")
+Button/styles/pressed = SubResource("StyleBoxEmpty_yeawl")

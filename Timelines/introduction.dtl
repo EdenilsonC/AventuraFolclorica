@@ -1,0 +1,18 @@
+[background fade="0.0"]
+[voice volume="1.5"]
+Ao chegar na floresta, Dudu encontra um rapazinho um tanto diferente.\
+Quem será?
+join dudu left
+dudu: Olá! Quem é você?
+leave dudu
+join saci right
+saci: Bem-vindo, garoto corajoso! Eu sou o Saci-Pererê, o guardião das travessuras e mistérios desta floresta.
+saci: Há muito tempo, eu nasci de um redemoinho, criado pelo vento e pelas folhas.
+saci: Com apenas uma perna, eu salto e brinco, pregando peças em quem se atreve a cruzar meu caminho.
+saci: Você gostaria de dicas sobre como encontar seu animalzinho?
+- Sim Gostaria!!
+	saci: Otimo!!  Eu tenho um desfio pra voce!
+	saci: Atravesse o labirinto na floresta e  pegue o  ramo de arruda...
+	saci: Só com ele você conseguirá acalmar  a Mula-Sem-Cabeça.
+- Não, obrigado!
+	saci: Tudo bem! Desvende os mistérios sozinho!

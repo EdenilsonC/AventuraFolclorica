@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://jibd8ns1xjrk"]
+
+[ext_resource type="Texture2D" uid="uid://diu756e0w8opn" path="res://ramo_de_arruda.png" id="1_e7as8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s00tn"]
+radius = 120.891
+height = 452.896
+
+[node name="ramo_de_arruda" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e7as8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.759263
+shape = SubResource("CapsuleShape2D_s00tn")

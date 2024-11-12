@@ -1,0 +1,16 @@
+[background arg="res://Portraits/fundo_dial_cuca.webp" fade="0.0"]
+join dudu left
+dudu: Achei você!!
+leave dudu
+join cuca right
+cuca: Finalmente nos encontramos, Dudu.\
+Eu sou a Cuca, a bruxa dos pesadelos e ilusões.
+cuca: Por gerações, tenho testado a coragem de jovens intrépidos como você. 
+cuca: Aqueles que falham ficam presos para sempre em meus feitiços.\
+Mas você parece diferente... veremos.
+leave cuca
+join dudu left
+dudu: Devolva meu gatinho!
+join cuca right
+cuca: Para libertar seu gato, você deve vencer este jogo da memória.\
+Mostre o que aprendeu com os outros guardiões.

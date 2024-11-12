@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://td5r7cogth5c"]
+
+[ext_resource type="Texture2D" uid="uid://d288f87q4bu2n" path="res://Characters/Cuca/cucaN.png" id="1_vhrku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvva4"]
+atlas = ExtResource("1_vhrku")
+region = Rect2(0, 0, 368, 398)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7msex"]
+atlas = ExtResource("1_vhrku")
+region = Rect2(368, 0, 368, 398)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq1u5"]
+atlas = ExtResource("1_vhrku")
+region = Rect2(736, 0, 368, 398)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yylgk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvva4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7msex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq1u5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e12kr"]
+
+[node name="cuca" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.703804, 0.713568)
+sprite_frames = SubResource("SpriteFrames_yylgk")
+autoplay = "default"
+frame_progress = 0.948381
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e12kr")

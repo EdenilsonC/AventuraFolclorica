@@ -1,0 +1,28 @@
+[background arg="res://Portraits/Floresta_fundo.webp" fade="0.0"]
+join dudu left
+dudu: Olá!  Quem é você?
+leave dudu
+join curupira right
+curupira: Olá! \
+Eu sou o Curupira.\
+Para continuar  seu caminho.\
+Você deverá acertar as questões a seguir.
+leave curupira
+join dudu left
+dudu: Vamos lá! Eu consigo!
+leave dudu
+join curupira right
+curupira: Qual dessas é a melhor opção para se manter a floresta viva!
+- Minerar todas a pedras preciosas
+	curupira: Resposta errada!\
+Tente novamente.
+- Preservar, não queimar e nem desmatar.
+	curupira: Muito bem! Você acertou!\
+Continue a sua jornada!
+- Abrir estradas.
+	curupira: Resposta errada!\
+Tente novamente.
+- Caçar os animais
+	curupira: Resposta errada!\
+Tente novamente.
+return

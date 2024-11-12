@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c47cl2clva0tv"]
+
+[ext_resource type="Script" path="res://Timelines/cena_cuca.gd" id="1_y4pic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_diyd6"]
+size = Vector2(292.75, 20)
+
+[node name="cena_cuca" type="Area2D"]
+script = ExtResource("1_y4pic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_diyd6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

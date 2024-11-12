@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn8yd5vxb8fr3"]
+
+[ext_resource type="Script" path="res://prefabs/saci.gd" id="1_mleib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqwf1"]
+size = Vector2(31, 88.9687)
+
+[sub_resource type="Animation" id="Animation_bockw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("saci:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1e25w"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("saci:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -12), Vector2(0, -0.152888)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frcye"]
+_data = {
+"RESET": SubResource("Animation_bockw"),
+"float": SubResource("Animation_1e25w")
+}
+
+[node name="saci" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_mleib")
+
+[node name="saci" type="Sprite2D" parent="."]
+region_enabled = true
+region_rect = Rect2(5, 0, 84, 102)
+
+[node name="collision" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_yqwf1")
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_frcye")
+}
+autoplay = "float"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

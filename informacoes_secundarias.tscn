@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwj5tt4m0153e"]
+
+[ext_resource type="Script" path="res://Management/inventario.gd" id="1_uw2xb"]
+[ext_resource type="Texture2D" uid="uid://d33odgdkkskbw" path="res://inventario.png" id="3_dm2uo"]
+[ext_resource type="Texture2D" uid="uid://diu756e0w8opn" path="res://ramo_de_arruda.png" id="4_hl0kv"]
+[ext_resource type="Texture2D" uid="uid://cyudk48yvrb7m" path="res://muiraquita.png" id="5_dc3w1"]
+[ext_resource type="Script" path="res://sprite_ramo_de_arruda.gd" id="5_ntmjl"]
+[ext_resource type="Script" path="res://sprite_muiraquita.gd" id="6_2ich5"]
+[ext_resource type="Texture2D" uid="uid://jcnchoy1b42l" path="res://frasco_agua_magica.png" id="7_blixf"]
+[ext_resource type="Script" path="res://sprite_frasco_agua_magica.gd" id="8_ujswh"]
+
+[node name="informacoes_secundarias" type="CanvasLayer"]
+
+[node name="inventario" type="Area2D" parent="."]
+position = Vector2(35, 528)
+scale = Vector2(0.265, 0.265)
+script = ExtResource("1_uw2xb")
+
+[node name="local_do_inventario" type="ColorRect" parent="inventario"]
+offset_left = 1958.49
+offset_top = -11.3207
+offset_right = 1998.49
+offset_bottom = 28.6793
+scale = Vector2(10.7747, 10.2063)
+color = Color(1, 1, 1, 0)
+
+[node name="o_inventario" type="Sprite2D" parent="inventario/local_do_inventario"]
+position = Vector2(9.44347, 26.8612)
+scale = Vector2(0.299019, 0.299019)
+texture = ExtResource("3_dm2uo")
+
+[node name="nome_inventario" type="Label" parent="inventario/local_do_inventario"]
+layout_mode = 0
+offset_left = -7.01719
+offset_top = 12.8114
+offset_right = 89.9828
+offset_bottom = 35.8114
+scale = Vector2(0.34161, 0.34161)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "INVENTÁRIO"
+
+[node name="sprite_ramo_de_arruda" type="Sprite2D" parent="inventario/local_do_inventario"]
+position = Vector2(-8.41809, 31.6677)
+scale = Vector2(0.0331601, 0.0331601)
+texture = ExtResource("4_hl0kv")
+script = ExtResource("5_ntmjl")
+
+[node name="sprite_muiraquita" type="Sprite2D" parent="inventario/local_do_inventario"]
+position = Vector2(9.09323, 31.298)
+scale = Vector2(0.0473779, 0.0473779)
+texture = ExtResource("5_dc3w1")
+script = ExtResource("6_2ich5")
+
+[node name="sprite_frasco_agua_magica" type="Sprite2D" parent="inventario/local_do_inventario"]
+position = Vector2(27.305, 31.298)
+scale = Vector2(0.027041, 0.027041)
+texture = ExtResource("7_blixf")
+script = ExtResource("8_ujswh")

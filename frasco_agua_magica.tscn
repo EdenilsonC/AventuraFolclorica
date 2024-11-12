@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsq1yqsbg5vxv"]
+
+[ext_resource type="Script" path="res://frasco_agua_magica.gd" id="1_kfas7"]
+[ext_resource type="Texture2D" uid="uid://jcnchoy1b42l" path="res://frasco_agua_magica.png" id="2_57tri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bsbe"]
+size = Vector2(197, 457)
+
+[node name="frasco_agua_magica" type="Area2D"]
+script = ExtResource("1_kfas7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.00559, 1)
+texture = ExtResource("2_57tri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_8bsbe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

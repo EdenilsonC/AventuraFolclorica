@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ff5473em32l"]
+
+[ext_resource type="Script" path="res://prefabs/cena_mula.gd" id="1_li3db"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iherf"]
+size = Vector2(111.75, 20)
+
+[node name="cena_mula" type="Area2D"]
+script = ExtResource("1_li3db")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_iherf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,11 @@
+[background arg="res://Portraits/Floresta_fundo.webp" fade="0.0"]
+join mula right
+iara: Vamos ver se conhece a minha história!\
+Quais dessas plantas são capazes de acalmar minha fúria?
+- Folha de alecrim
+- Pé de Salgueiro
+- Capim santo
+- Ramo de Arruda
+	mula: Muito bem!\
+Vejo que está aprendendo sobre o folclore!
+	mula: Pegue o amuleto mais a frente e veja se consegue passar pelo desafio com a Iara!

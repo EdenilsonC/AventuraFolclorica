@@ -1,0 +1,79 @@
+[gd_scene load_steps=17 format=3 uid="uid://6tq6k5yrf5f0"]
+
+[ext_resource type="Script" path="res://Management/gamelevel.gd" id="1_xqn48"]
+[ext_resource type="PackedScene" uid="uid://d1h3xugkq77l4" path="res://Terrain/terrain_manager.tscn" id="1_yp4tc"]
+[ext_resource type="PackedScene" uid="uid://b7ebqueaigvr7" path="res://Characters/Dudu/dudu.tscn" id="2_kbew4"]
+[ext_resource type="PackedScene" uid="uid://bn8yd5vxb8fr3" path="res://prefabs/saci.tscn" id="4_qibhn"]
+[ext_resource type="PackedScene" uid="uid://7ff5473em32l" path="res://prefabs/cena_mula.tscn" id="6_qa2y7"]
+[ext_resource type="PackedScene" uid="uid://cq1g5hdyh0ml6" path="res://prefabs/abertura_jogo.tscn" id="7_45fg3"]
+[ext_resource type="PackedScene" uid="uid://bvwuc0y4fp5n5" path="res://prefabs/pause_menu.tscn" id="8_1i6bo"]
+[ext_resource type="PackedScene" uid="uid://eer2af1h8y4m" path="res://prefabs/cena_iara.tscn" id="8_iamoa"]
+[ext_resource type="PackedScene" uid="uid://c47cl2clva0tv" path="res://Timelines/cena_cuca.tscn" id="8_l8uvi"]
+[ext_resource type="PackedScene" uid="uid://td5r7cogth5c" path="res://Timelines/cuca.tscn" id="9_x2r7d"]
+[ext_resource type="Texture2D" uid="uid://bx5olopapb0d0" path="res://Characters/Miau/miau.png" id="11_7mu8w"]
+[ext_resource type="PackedScene" uid="uid://dwj5tt4m0153e" path="res://informacoes_secundarias.tscn" id="12_ptlmm"]
+[ext_resource type="PackedScene" uid="uid://jibd8ns1xjrk" path="res://ramo_de_arruda.tscn" id="13_yh4hs"]
+[ext_resource type="Script" path="res://ramo_de_arruda.gd" id="14_odlki"]
+[ext_resource type="PackedScene" uid="uid://vqitnlli3ed4" path="res://muiraquita.tscn" id="15_774mi"]
+[ext_resource type="PackedScene" uid="uid://dsq1yqsbg5vxv" path="res://frasco_agua_magica.tscn" id="16_3khlh"]
+
+[node name="Gamelevel" type="Node2D"]
+script = ExtResource("1_xqn48")
+
+[node name="TerrainManager" parent="." instance=ExtResource("1_yp4tc")]
+position = Vector2(36, -11)
+
+[node name="saci" parent="TerrainManager" instance=ExtResource("4_qibhn")]
+position = Vector2(831, -131)
+collision_layer = 7
+collision_mask = 7
+
+[node name="Dudu" parent="TerrainManager" instance=ExtResource("2_kbew4")]
+position = Vector2(2786, 1407)
+
+[node name="AnimatedSprite2D" parent="TerrainManager/Dudu" index="0"]
+position = Vector2(0, -4)
+
+[node name="Camera2D" type="Camera2D" parent="TerrainManager/Dudu"]
+
+[node name="cena_mula" parent="TerrainManager" instance=ExtResource("6_qa2y7")]
+position = Vector2(2866, -1216)
+
+[node name="Abertura" parent="TerrainManager" instance=ExtResource("7_45fg3")]
+position = Vector2(436, 619)
+
+[node name="cena_iara" parent="TerrainManager" instance=ExtResource("8_iamoa")]
+position = Vector2(2675, 420)
+
+[node name="cena_cuca" parent="TerrainManager" instance=ExtResource("8_l8uvi")]
+position = Vector2(3080, 1381)
+
+[node name="pause_menu" parent="." instance=ExtResource("8_1i6bo")]
+
+[node name="cuca" parent="." instance=ExtResource("9_x2r7d")]
+position = Vector2(3364, 1355)
+
+[node name="Miau" type="Sprite2D" parent="."]
+position = Vector2(3663, 1439)
+scale = Vector2(0.13, 0.138)
+texture = ExtResource("11_7mu8w")
+
+[node name="informacoes_secundarias" parent="." instance=ExtResource("12_ptlmm")]
+
+[node name="ramo_de_arruda" parent="." instance=ExtResource("13_yh4hs")]
+position = Vector2(2519, -1019)
+scale = Vector2(0.111509, 0.123653)
+script = ExtResource("14_odlki")
+
+[node name="muiraquita" parent="." instance=ExtResource("15_774mi")]
+position = Vector2(3388, -122)
+scale = Vector2(0.128849, 0.134199)
+
+[node name="frasco_agua_magica" parent="." instance=ExtResource("16_3khlh")]
+position = Vector2(3247, 838)
+scale = Vector2(0.140509, 0.147952)
+
+[connection signal="body_entered" from="ramo_de_arruda" to="ramo_de_arruda" method="_on_body_entered"]
+[connection signal="body_entered" from="muiraquita" to="muiraquita" method="_on_body_entered"]
+
+[editable path="TerrainManager/Dudu"]
